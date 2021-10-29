@@ -1,4 +1,5 @@
 const express = require('express')
+var cors = require('cors')
 
 //IMPORTAR LA FUNCION PARA CONECTARME CON LA BD
 const { conectarBD } = require('../database/conexion.js')
@@ -18,8 +19,8 @@ class ServidorModelo {
 
     despertarServidor() {
 
-        this.app.listen(process.env.PUERTO, function () {
-            console.log("servidor encendido " + process.env.PUERTO)
+        this.app.listen(process.env.PORT, function () {
+            console.log("servidor encendido " + process.env.PORT)
         })
 
     }
